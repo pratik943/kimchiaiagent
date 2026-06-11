@@ -25,6 +25,27 @@ module.exports = async (req, res) => {
 
     const chatId = update.message.chat.id;
     const userText = update.message.text;
+    const chatId = update.message.chat.id;
+const userText = update.message.text;
+
+if (userText === "/start") {
+
+  await axios.post(
+    `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
+    {
+      chat_id: chatId,
+      text: `👋 Welcome to ArtificialLodu!
+
+Commands:
+/research <topic>
+/clear
+
+Just send a message to start chatting.`
+    }
+  );
+
+  return res.status(200).send("OK");
+}
     
 console.log("SENDER USERNAME:", update.message?.from?.username);
 console.log("SENDER ID:", update.message?.from?.id);

@@ -25,7 +25,9 @@ module.exports = async (req, res) => {
 
     const chatId = update.message.chat.id;
     const userText = update.message.text;
-    console.log("FROM:", update.message.from);
+    
+console.log("SENDER USERNAME:", update.message?.from?.username);
+console.log("SENDER ID:", update.message?.from?.id);
 
     // Clear memory
     if (userText === "/clear") {

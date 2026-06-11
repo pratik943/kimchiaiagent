@@ -25,8 +25,6 @@ module.exports = async (req, res) => {
 
     const chatId = update.message.chat.id;
     const userText = update.message.text;
-    const chatId = update.message.chat.id;
-const userText = update.message.text;
 
 if (userText === "/start") {
 

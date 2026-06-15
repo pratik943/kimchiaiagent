@@ -80,7 +80,7 @@ console.log("SENDER ID:", update.message?.from?.id);
       const aiResponse = await axios.post(
         "https://llm.kimchi.dev/openai/v1/chat/completions",
         {
-          model: "kimi-k2.6",
+          model: "minimax-m2.7",
           messages: [
             {
               role: "system",

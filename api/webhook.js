@@ -80,7 +80,7 @@ console.log("SENDER ID:", update.message?.from?.id);
       const aiResponse = await axios.post(
         "https://llm.kimchi.dev/openai/v1/chat/completions",
         {
-          model: "kimi-k2.5",
+          model: "kimi-k2.6",
           messages: [
             {
               role: "system",
@@ -147,7 +147,7 @@ Include:
     const aiResponse = await axios.post(
       "https://llm.kimchi.dev/openai/v1/chat/completions",
       {
-        model: "nemotron-3-ultra-fp4",
+        model: "kimi-k2.6",
         messages: [
           {
             role: "system",
